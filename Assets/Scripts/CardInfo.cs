@@ -9,17 +9,4 @@ public class AceSpade : MonoBehaviour
     // 1. card are numbered from 1 ace to 13 king.
     // 2. suit is numbered spade 1, heart 2, club 3, diamond 4.
     // 3. id is a numeric value from 1-52.
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
