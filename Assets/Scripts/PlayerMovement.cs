@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -70,5 +71,15 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+    }
+
+    // To move to new scene
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Door1")) {
+            SceneManager.LoadScene("SampleScene"); // replace with current scene + 1 to move to next
+        }
+
+        // eventually add if collide with "enemy" move to battle scene
     }
 }
