@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         // Convert screen width and height into world unit
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         playerHalfWidth = spriteRenderer.bounds.extents.x;
+        
     }
 
     // Update is called once per frame
@@ -77,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Door1")) {
-            SceneManager.LoadScene("SampleScene"); // replace with current scene + 1 to move to next
+            SceneManager.LoadScene("Level2"); // replace with current scene + 1 to move to next
         }
 
         // eventually add if collide with "enemy" move to battle scene
