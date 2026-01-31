@@ -6,6 +6,6 @@ public class HeartsAbility : Ability
     public int att;
     protected override void Activate()
     {
-        Debug.Log("Club Ability!");
+        Debug.Log("Heart Ability!");
     }
 }
