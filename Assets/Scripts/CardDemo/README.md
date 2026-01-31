@@ -12,22 +12,64 @@ This is a Unity conversion of the Raylib card-based boss battle game.
 ### 2. Install Required Packages
 1. Open Window > Package Manager
 2. Install **TextMeshPro** (if not already installed)
-3. Install **DOTween** (optional, for smooth animations)
-   - Go to Window > Package Manager
-   - Click the + button and select "Add package from git URL"
-   - Enter: `https://github.com/Demigiant/dotween.git`
-   - OR download from the Asset Store
+   - Unity will prompt you to import TMP Essentials on first use
 
-### 3. Add Scripts
+### 3. Install DOTween (Optional but Recommended)
+DOTween provides smooth, professional animations for the cards.
+
+**Option A: Unity Asset Store (Recommended)**
+1. Open the [DOTween Asset Store page](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
+2. Click "Add to My Assets" (it's free)
+3. In Unity, open Window > Package Manager
+4. Switch to "My Assets" at the top
+5. Find "DOTween (HOTween v2)"
+6. Click Download, then Import
+7. Import all files when prompted
+
+**Option B: Download from Website**
+1. Go to [DOTween Downloads](https://dotween.demigiant.com/download.php)
+2. Download "DOTween_vX.X.XXX.unitypackage"
+3. In Unity, go to Assets > Import Package > Custom Package
+4. Select the downloaded .unitypackage file
+5. Import all files
+
+**Setup DOTween (REQUIRED):**
+
+After importing, you need to run the setup:
+
+1. **If the DOTween Setup window appears automatically:**
+   - Click "Setup DOTween"
+   - Click "Apply"
+   - You're done!
+
+2. **If the setup window doesn't appear (or you closed it):**
+   - Go to **Tools > Demigiant > DOTween Utility Panel**
+   - In the panel that opens, click the **"Setup DOTween..."** button
+   - Click **"Apply"** in the next window
+   - Optional: Click **"Create ASMDEF"** for faster compile times
+   - Close the panel
+
+3. **Verify DOTween is set up:**
+   - You should see a "DOTweenSettings" file in your Resources folder
+   - No errors in the Console
+   - Ready to use!
+
+**If you skip DOTween:**
+Use the CardUI_Simple.cs script instead, which provides the same functionality using Unity's built-in Coroutines.
+
+### 4. Add Scripts
 Copy all the .cs files to your Assets/Scripts folder:
 - `Card.cs`
 - `DeckManager.cs`
 - `ComboChecker.cs`
-- `CardUI.cs`
+- `CardUI.cs` - **Use this if you installed DOTween**
+- `CardUI_Simple.cs` - **Use this if you skipped DOTween** (delete CardUI.cs if using this)
 - `GameManager.cs`
 - `MenuController.cs`
 
-### 4. Create the UI Hierarchy
+**Important:** Only use ONE CardUI script - either CardUI.cs (with DOTween) OR CardUI_Simple.cs (without DOTween).
+
+### 5. Create the UI Hierarchy
 
 #### Main Canvas
 1. Create a Canvas (right-click in Hierarchy > UI > Canvas)
@@ -72,7 +114,7 @@ Copy all the .cs files to your Assets/Scripts folder:
    - Add text: "YOU LOST!"
    - Add restart button
 
-### 5. Create Card Prefab
+### 6. Create Card Prefab
 
 1. Create Empty GameObject named "Card"
 2. Add these components:
@@ -85,7 +127,7 @@ Copy all the .cs files to your Assets/Scripts folder:
 4. Set Layout Element (recommended size: 150x200)
 5. Drag to Prefabs folder
 
-### 6. Setup GameManager
+### 7. Setup GameManager
 
 1. Create Empty GameObject named "GameManager"
 2. Add GameManager script
@@ -97,12 +139,12 @@ Copy all the .cs files to your Assets/Scripts folder:
    - Set boss HP values (100, 200)
    - Set player HP values
 
-### 7. Setup Menu Controller
+### 8. Setup Menu Controller
 
 1. Add MenuController script to MenuPanel
 2. Assign start/restart/quit buttons
 
-### 8. Configure Initial State
+### 9. Configure Initial State
 
 1. Make sure only MenuPanel is active initially
 2. Disable GamePanel, WinPanel, LostPanel
@@ -138,8 +180,8 @@ You can adjust these values in the GameManager inspector:
 
 ## Optional Enhancements
 
-### Animations (if using DOTween)
-The CardUI script includes animation support. Cards will smoothly move when dealt.
+### Animations
+The CardUI script includes smooth animation support using Unity's built-in Coroutines. Cards will smoothly move when dealt from the draw pile to your hand.
 
 ### Sound Effects
 Add AudioSource components to play sounds for:
@@ -165,16 +207,30 @@ Add AudioSource components to play sounds for:
 - Verify all TextMeshPro fields are assigned in GameManager
 - Check that panels are properly enabled/disabled
 
-**DOTween errors:**
-If you don't want to use DOTween, remove the line:
-```csharp
-transform.DOMove(transform.position, duration).SetEase(Ease.OutQuad);
-```
-from CardUI.cs and replace with:
-```csharp
-// Simple instant positioning
-transform.position = transform.position;
-```
+**Which CardUI script to use:**
+- **With DOTween installed**: Use `CardUI.cs` for smooth animations
+- **Without DOTween**: Use `CardUI_Simple.cs` (same functionality, uses Coroutines)
+- Both scripts are functionally identical, just different animation methods
+
+**DOTween not set up properly:**
+- If you see errors like `The type or namespace name 'DG' could not be found`
+- **Solution:** Go to **Tools > Demigiant > DOTween Utility Panel**
+- Click **"Setup DOTween..."** button
+- Click **"Apply"**
+- Wait for Unity to recompile
+- If the menu item doesn't exist, DOTween wasn't imported correctly - try reimporting
+
+**DOTween menu (Tools > Demigiant) doesn't exist:**
+- DOTween wasn't imported properly
+- Go to Window > Package Manager > My Assets
+- Find DOTween and click "Remove"
+- Then re-import it following the installation steps above
+- Make sure to import ALL files when prompted
+
+**Still having DOTween issues:**
+- Just use `CardUI_Simple.cs` instead - delete `CardUI.cs` from your project
+- Update the Card Prefab to use CardUI_Simple component instead
+- Works exactly the same, just uses Unity's native animation system
 
 ## Build Settings
 

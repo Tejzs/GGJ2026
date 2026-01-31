@@ -106,10 +106,12 @@ public class GameManager : MonoBehaviour
                     
                     if (playerHP <= 0)
                     {
+                        currentTurn = GameTurn.GAME_OVER;
                         ShowLost();
                     }
                     else if (bossHP <= 0)
                     {
+                        currentTurn = GameTurn.GAME_OVER;
                         if (currentLevel == 1)
                         {
                             StartLevel2();
@@ -140,12 +142,18 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel1()
     {
+        Debug.Log("Starting Level 1");
+        
+        // Cancel any pending invokes
+        
         currentScene = GameScene.LEVEL1;
         currentLevel = 1;
         playerHP = playerStartHP;
         bossHP = boss1MaxHP;
         currentBossMaxHP = boss1MaxHP;
         currentTurn = GameTurn.PLAYER_TURN;
+        bossAttackTimer = 0f;
+        comboMessageTimer = 0f;
 
         menuPanel.SetActive(false);
         gamePanel.SetActive(true);
@@ -165,12 +173,22 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel2()
     {
+        Debug.Log("Starting Level 2");
+        
+        // Cancel any pending invokes
+        CancelInvoke();
+        
         currentScene = GameScene.LEVEL2;
         currentLevel = 2;
         playerHP = level2PlayerHP;
         bossHP = boss2MaxHP;
         currentBossMaxHP = boss2MaxHP;
         currentTurn = GameTurn.PLAYER_TURN;
+        bossAttackTimer = 0f;
+
+        gamePanel.SetActive(true);
+        winPanel.SetActive(false);
+        lostPanel.SetActive(false);
 
         bossNameText.text = "BOSS 2";
         bossHealthSlider.maxValue = currentBossMaxHP;
@@ -239,14 +257,27 @@ public class GameManager : MonoBehaviour
 
     void OnAttackButtonClicked()
     {
-        if (currentTurn != GameTurn.PLAYER_TURN) return;
+        if (currentTurn != GameTurn.PLAYER_TURN)
+        {
+            Debug.Log("Not player turn, can't attack");
+            return;
+        }
 
         ComboResult combo = ComboChecker.CheckCombos(deckManager.hand);
         int baseDamage = deckManager.CalculateDamage();
+        
+        if (baseDamage <= 0)
+        {
+            Debug.Log("No cards selected");
+            return;
+        }
+        
         int finalDamage = (int)(baseDamage * combo.multiplier);
 
         bossHP -= finalDamage;
         if (bossHP < 0) bossHP = 0;
+
+        Debug.Log($"Dealt {finalDamage} damage to boss. Boss HP: {bossHP}");
 
         // Show combo message
         if (combo.hasCombo)
@@ -268,8 +299,27 @@ public class GameManager : MonoBehaviour
         
         damagePreviewText.text = "";
 
-        currentTurn = GameTurn.BOSS_TURN;
-        UpdateTurnDisplay();
+        // Check if boss is dead before switching turns
+        if (bossHP <= 0)
+        {
+            Debug.Log($"Boss defeated! Current level: {currentLevel}");
+            currentTurn = GameTurn.GAME_OVER;
+            
+            if (currentLevel == 1)
+            {
+                // Small delay before starting level 2
+                Invoke(nameof(StartLevel2), 1.5f);
+            }
+            else
+            {
+                Invoke(nameof(ShowWin), 1.5f);
+            }
+        }
+        else
+        {
+            currentTurn = GameTurn.BOSS_TURN;
+            UpdateTurnDisplay();
+        }
     }
 
     void BossAttack()
@@ -282,15 +332,23 @@ public class GameManager : MonoBehaviour
 
     void ShowWin()
     {
+        Debug.Log("You Win!");
+        CancelInvoke();
         currentScene = GameScene.WIN;
+        currentTurn = GameTurn.GAME_OVER;
         gamePanel.SetActive(false);
         winPanel.SetActive(true);
+        lostPanel.SetActive(false);
     }
 
     void ShowLost()
     {
+        Debug.Log("You Lost!");
+        CancelInvoke();
         currentScene = GameScene.LOST;
+        currentTurn = GameTurn.GAME_OVER;
         gamePanel.SetActive(false);
+        winPanel.SetActive(false);
         lostPanel.SetActive(true);
     }
 

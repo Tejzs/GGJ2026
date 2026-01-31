@@ -60,7 +60,18 @@ public class CardUI : MonoBehaviour
 
     public void AnimateFromPosition(Vector3 startPos, float duration = 0.4f)
     {
+        // Set the starting position
         transform.position = startPos;
-        transform.DOMove(transform.position, duration).SetEase(Ease.OutQuad);
+        
+        // Get the target position (current position in layout)
+        // We need to force the layout to update first
+        Canvas.ForceUpdateCanvases();
+        Vector3 targetPos = transform.position;
+        
+        // Reset to start position
+        transform.position = startPos;
+        
+        // Animate to target using DOTween
+        transform.DOMove(targetPos, duration).SetEase(Ease.OutQuad);
     }
 }
