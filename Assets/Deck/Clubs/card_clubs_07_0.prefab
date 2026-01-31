@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AceSpade
   number: 7
-  Suit: 3
+  suit: 3
   id: 33

@@ -1,12 +1,20 @@
 using UnityEngine;
 
-public class AceSpade : MonoBehaviour
+public enum Suit
 {
-    public int number;
-    public int Suit;
-    public int id;
+    Spade = 1,
+    Heart = 2,
+    Club = 3,
+    Diamond = 4
+}
 
-    // 1. card are numbered from 1 ace to 13 king.
-    // 2. suit is numbered spade 1, heart 2, club 3, diamond 4.
-    // 3. id is a numeric value from 1-52.
+public class CardData : MonoBehaviour
+{
+    [Range(1, 13)]
+    public int number;   // 1 = Ace, 13 = King
+
+    public Suit suit;
+
+    [Range(1, 52)]
+    public int id;
 }
