@@ -4,11 +4,17 @@
 TagManager:
   serializedVersion: 3
   tags:
+<<<<<<< HEAD
   - Enemy
   - Ground
   - Door1
   - Door2
   - Door3
+=======
+  - Ground
+  - Door1
+  - Enemy
+>>>>>>> 457438657d9f0485f6696902d668daeb499cbf55
   layers:
   - Default
   - TransparentFX
