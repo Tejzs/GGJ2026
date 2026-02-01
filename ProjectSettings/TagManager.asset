@@ -3,25 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-<<<<<<< HEAD
-  tags:
-  - Ground
-=======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-  tags:
-  - Ground
-  - Door1
-=======
-  tags: []
->>>>>>> be2f86be41a0d9db0b0e167e85a813b5c3638b5b
-=======
   tags:
   - Ground
   - Door1
   - Enemy
->>>>>>> Stashed changes
->>>>>>> 4ae7b1b (Resolve merge conflicts and add shooting/enemy systems)
   layers:
   - Default
   - TransparentFX
@@ -29,17 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-<<<<<<< HEAD
   - Ground
-=======
-<<<<<<< Updated upstream
   - 
->>>>>>> 4ae7b1b (Resolve merge conflicts and add shooting/enemy systems)
-  - 
-=======
-  - Enemy
-  - Player
->>>>>>> Stashed changes
   - 
   - 
   - 
