@@ -188,7 +188,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -279,7 +279,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -533,7 +533,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 2556116983205074844, guid: 0a493a553f110dd4eb3877548d919a79, type: 3}
     - target: {fileID: 3844841361765193670, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4097242068817301162, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_Name
@@ -713,7 +713,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -804,7 +804,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -895,7 +895,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1067,7 +1067,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1158,7 +1158,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7611323231784340830, guid: 80664afa59e4d874a8a1a58602af7dd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1247,7 +1247,7 @@ PrefabInstance:
       objectReference: {fileID: 2556116983205074844, guid: 0a493a553f110dd4eb3877548d919a79, type: 3}
     - target: {fileID: 3844841361765193670, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4097242068817301162, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_Name
@@ -1336,7 +1336,7 @@ PrefabInstance:
       objectReference: {fileID: 2556116983205074844, guid: 0a493a553f110dd4eb3877548d919a79, type: 3}
     - target: {fileID: 3844841361765193670, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4097242068817301162, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_Name
@@ -1425,7 +1425,7 @@ PrefabInstance:
       objectReference: {fileID: 2556116983205074844, guid: 0a493a553f110dd4eb3877548d919a79, type: 3}
     - target: {fileID: 3844841361765193670, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4097242068817301162, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_Name

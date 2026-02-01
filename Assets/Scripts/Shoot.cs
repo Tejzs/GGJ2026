@@ -10,7 +10,7 @@ public class PlayerShoot : MonoBehaviour
     public float fireRate = 0.25f;
 
     [Header("Ammo")]
-    public int magazineSize = 6;
+    public int magazineSize = 13;
     public float reloadTime = 1.5f;
 
     [Header("Card Sprites")]
