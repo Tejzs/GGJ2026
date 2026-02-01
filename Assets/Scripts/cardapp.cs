@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class cardapp : MonoBehaviour
+public class OpenLink : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string url = "https://scratch.mit.edu/projects/1273752334";
 
-    // Update is called once per frame
-    void Update()
+    public void OpenURL()
     {
-        
+        Application.OpenURL(url);
     }
 }
+
