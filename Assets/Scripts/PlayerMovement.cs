@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleMovement();
-        ClampMovement();
         FlipCharacterX();
     }
 
@@ -45,14 +45,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         xPosLastFrame = transform.position.x;
-    }
-
-    private void ClampMovement()
-    {
-        float clampedX = Mathf.Clamp(transform.position.x, -screenBounds.x + playerHalfWidth, screenBounds.x - playerHalfWidth);
-        Vector2 pos = transform.position; // Get the player's current position
-        pos.x = clampedX; // Reassign the X value to the clamped position
-        transform.position = pos; // Reassign the clamped value back to the player
     }
 
 
@@ -79,6 +71,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Door1")) {
             SceneManager.LoadScene("Level2"); // replace with current scene + 1 to move to next
+        }
+        if (other.gameObject.CompareTag("Door2")) {
+            SceneManager.LoadScene("Level3"); // replace with current scene + 1 to move to next
+        }
+        if (other.gameObject.CompareTag("Door3")) {
+            SceneManager.LoadScene("Level4"); // replace with current scene + 1 to move to next
         }
 
         // eventually add if collide with "enemy" move to battle scene
