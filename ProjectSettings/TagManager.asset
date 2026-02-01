@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Door2
   - Door3
+  - SpadeMask
   layers:
   - Default
   - TransparentFX
