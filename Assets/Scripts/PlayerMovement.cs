@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private string url = "https://scratch.mit.edu/projects/1273752334";
     [SerializeField] private float speed = 5f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
@@ -81,6 +82,10 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Door3")) {
             SceneManager.LoadScene("Level4"); // replace with current scene + 1 to move to next
+        }
+        if (other.gameObject.CompareTag("Link")) {
+        
+            Application.OpenURL(url);
         }
 
         // eventually add if collide with "enemy" move to battle scene

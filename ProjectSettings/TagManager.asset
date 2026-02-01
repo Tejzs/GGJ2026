@@ -11,6 +11,7 @@ TagManager:
   - Door3
   - SpadeMask
   - Door4
+  - Link
   layers:
   - Default
   - TransparentFX

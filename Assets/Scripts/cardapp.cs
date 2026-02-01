@@ -8,5 +8,13 @@ public class OpenLink : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Link")) {
+        
+            Debug.Log("ww");
+        }
+    }
 }
 
