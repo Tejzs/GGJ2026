@@ -172,6 +172,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7219650766138810423, guid: 517d91852220e223c8bb2db0b9b7497d, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6474192781578853444, guid: d33d04842f38bfa7a8eb899266a8c979, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2071067154876299944, guid: 39a7b09d356994f7e9f1dc39bf87170e, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: -7874244518594638235, guid: 4895c226c90a4e15192782aaf0175f1c, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: 4550335671454972635, guid: cc0f511c2384185b9ac10dc55f367c63, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[5]'
+      value: 
+      objectReference: {fileID: -7196450946843792851, guid: 1766a385c957547e98e0aab320a1f763, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[6]'
+      value: 
+      objectReference: {fileID: -7876887201909681849, guid: 25bfdfdb4e098d170900b6a1596aa04d, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[7]'
+      value: 
+      objectReference: {fileID: -129814319083160658, guid: d20ff7686bf05933494eab1783ad500f, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[8]'
+      value: 
+      objectReference: {fileID: 7470654162476229051, guid: d82a28984b4e1f21abc39c4b184e3ca6, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[9]'
+      value: 
+      objectReference: {fileID: -2020352641509245658, guid: e95b9c6f7bb308b6192f55696bbe7c3e, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[10]'
+      value: 
+      objectReference: {fileID: 2957020226000766443, guid: 30fb3a1470a9ed30bab4a4d9a33b679e, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[11]'
+      value: 
+      objectReference: {fileID: -9212377461828813534, guid: 0b25175bbb8e8824294e05d81a973e1d, type: 3}
+    - target: {fileID: 7581632933838385241, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+      propertyPath: 'cardSprites.Array.data[12]'
+      value: 
+      objectReference: {fileID: -4759509827412318179, guid: ff5583ee3b5b0fbebaea881ea0dec6b2, type: 3}
     - target: {fileID: 8895130979558252878, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
       propertyPath: m_Name
       value: Player
