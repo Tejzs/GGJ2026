@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2934611616030925622, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.39
+      value: 0.38999987
       objectReference: {fileID: 0}
     - target: {fileID: 2934611616030925622, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.57
+      value: -4.57
       objectReference: {fileID: 0}
     - target: {fileID: 2934611616030925622, guid: 9b777f083d4f05e4b8d1d2a3ba1ce6fc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -454,7 +454,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
---- !u!1 &2126878684
+--- !u!1 &1818283253
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,48 +462,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2126878685}
-  - component: {fileID: 2126878686}
+  - component: {fileID: 1818283255}
+  - component: {fileID: 1818283254}
   m_Layer: 0
-  m_Name: DeckGenerator
+  m_Name: Enemy Gen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2126878685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126878684}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.38326, y: -3.02669, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2126878686
+--- !u!114 &1818283254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126878684}
+  m_GameObject: {fileID: 1818283253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b97ae26f3e824dfe8b90d18e179bbd37, type: 3}
+  m_Script: {fileID: 11500000, guid: c6ac6fd4463ab67f7873753aceb28a9f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeckGenerator
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWaveSpawner
+  enemyPrefab: {fileID: 4471750098170447657, guid: 75689e35c664fc305b798e0e368a7c65, type: 3}
+  minX: -8
+  maxX: 8
+  spawnY: -3
+  timeBetweenSpawns: 0.5
+  timeBetweenWaves: 3
+--- !u!4 &1818283255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818283253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.36, y: -4.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 2126878685}
   - {fileID: 1588089502}
   - {fileID: 280043719}
+  - {fileID: 1818283255}
