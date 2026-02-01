@@ -106,3 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskScript
   suit: 1
   maskName: Mask of Spades
+  handsize: 7

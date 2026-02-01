@@ -106,3 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   suit: 3
   maskName: Mask of Clubs
+  handsize: 7

@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< HEAD
   tags:
   - Ground
   - Door1
+=======
+  tags: []
+>>>>>>> be2f86be41a0d9db0b0e167e85a813b5c3638b5b
   layers:
   - Default
   - TransparentFX
@@ -13,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
