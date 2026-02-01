@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 2419439425195164545, guid: 12413b6823ad8d545a18fe48af0f39e3, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 51528362}
     - target: {fileID: 2730153418589137141, guid: 12413b6823ad8d545a18fe48af0f39e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.13264
@@ -362,7 +362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 645655164065514665, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
       propertyPath: jumpForce
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1932782503840668145, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
       propertyPath: m_FlipX
@@ -488,6 +488,11 @@ PrefabInstance:
 --- !u!4 &51528361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4313506960381809390, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
+  m_PrefabInstance: {fileID: 51528360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &51528362 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6812137187094237521, guid: 88c5fc801e1766e48a57e0129e00acdf, type: 3}
   m_PrefabInstance: {fileID: 51528360}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &257357244

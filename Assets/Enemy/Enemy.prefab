@@ -187,7 +187,7 @@ MonoBehaviour:
   fireRate: 1.5
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   firePoint: {fileID: 1101711810164227049}
 --- !u!114 &5016029577116669082
 MonoBehaviour:

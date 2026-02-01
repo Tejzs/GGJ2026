@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b748e930cb6d814386c7ed483cb660b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  url: https://scratch.mit.edu/projects/1273752334
   speed: 5
   spriteRenderer: {fileID: 1741921860078706921}
   animator: {fileID: 6001637240608496122}
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
   rigidBody: {fileID: 8247316537219787831}
   spriteRenderer: {fileID: 1741921860078706921}
-  jumpForce: 13
+  jumpForce: 25
 --- !u!95 &6001637240608496122
 Animator:
   serializedVersion: 7
