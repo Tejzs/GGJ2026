@@ -10,6 +10,7 @@ TagManager:
   - Door2
   - Door3
   - SpadeMask
+  - Door4
   layers:
   - Default
   - TransparentFX
