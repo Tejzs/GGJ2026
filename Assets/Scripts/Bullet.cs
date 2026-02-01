@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 12f;
-    public float lifeTime = 2f;
+    public float speed = 18f;
+    public float lifeTime = 5f;
     public LayerMask enemyLayer;
 
     private Vector2 direction;
@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
+        transform.Rotate(5f, 0.2f, 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
