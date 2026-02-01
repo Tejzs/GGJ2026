@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private float playerHalfWidth;
     private float xPosLastFrame;
     private float input;
+    private float y = 0;
+    public Transform playerMask;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,11 +40,13 @@ public class PlayerMovement : MonoBehaviour
         {
             // We are moving right
             spriteRenderer.flipX = false;
+            playerMask.localPosition = new Vector3(0.15f, 0.8482001f, 1);
+            
         } else if (input < 0 && (transform.position.x < xPosLastFrame))
         {
             // We are moving left
             spriteRenderer.flipX = true;
-        }
+            playerMask.localPosition = new Vector3(-0.15f, 0.8482001f, 1);        }
 
         xPosLastFrame = transform.position.x;
     }
